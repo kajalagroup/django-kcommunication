@@ -41,7 +41,8 @@ def send_email(  # noqa
         if files:
             logger.info("files: %s", files)
         if files_content:
-            logger.info("files_content: %s", files_content)
+            file_names = [file_content[0] for file_content in files_content]
+            logger.info("files_content with names: %s", file_names)
 
         logger.info("%s", html or text)
         return
