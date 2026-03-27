@@ -37,6 +37,12 @@ def send_email(  # noqa
             logger.info("Cc: %s", cc_recipients)
         if bcc_recipients:
             logger.info("Bcc: %s", bcc_recipients)
+
+        if files:
+            logger.info("files: %s", files)
+        if files_content:
+            logger.info("files_content: %s", files_content)
+
         logger.info("%s", html or text)
         return
 
